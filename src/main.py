@@ -52,10 +52,3 @@ def init_db(appFlask):
 @app.route('/')
 def home():
     return render_template('Home/home.html', title='Pagina Inicial')
-
-
-
-if __name__ == "__main__":
-    if 'init_db' in sys.argv:
-        init_db(app)
-    app.run()
