@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Home/home.css') }}">
+        <script src="{{ url_for('static', filename='Home/home.js') }}"></script>
+        <title>Paginal Incial</title>
+    </head>
+    <body>
+        <section class="home-section">
+            <div class="home-welcome">
+                <h1>Bem vindo!!</h1>
+                <h2>Cadastro de doenças</h2>
+            </div>
+            <section class="incidencia-section">
+                <p>Tabela de incidencias</p>
+            </section>
+            <div class="home-btn">
+                <input class='btn-cadastro-doenca' type='button' value='Cadastrar Doença' onclick="window.location.href='/doenca/'">
+                <input class='btn-incidencia' type='button' value='Incidências' onclick="window.location.href='/incidencia/'">
+                <input class='btn-tabela' type='button' value='Tabela de doênças' onclick="window.location.href='/tabela/'">
+                <input class='btn-grafico' type='button' value='Gráfico de incidências' onclick="window.location.href='/grafico/'">
+            </div>
+            </div>
+        </section>
+    </body>
+</html>

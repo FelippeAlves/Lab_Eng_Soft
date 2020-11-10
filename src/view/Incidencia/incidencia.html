@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Incidencia/incidencia.css') }}">
+    <script src="{{ url_for('static', filename='Incidencia/incidencia.js') }}"></script>
+    <title>Incidencias</title>
+</head>
+<body>
+    <section class="section-conteiner">
+        <div class="txt-nome">
+            <p>Nome da doença:</p>
+        </div>
+        <div class="dropdown">
+            <select class="selecao-doenca" name="doencas" id="doencas">
+                <option value="" disabled selected>Selecione a doênça</option>
+                {% if data.doenca %}
+                    {% for item in data.doenca %}
+                        <option value="{{ item }}">{{ item }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        <div>
+            <p>Data da incidencia:</p>
+        </div>
+        <div>
+            <input class="input-data" type="date" name="data-incidencia" id="data-incidencia">
+        </div>
+        <div class="btn-save">
+            <input type="button" value="Salvar" onclick="saveIncidencias()">
+        </div>
+    </section>
+</body>
+</html>
