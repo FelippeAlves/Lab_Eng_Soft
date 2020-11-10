@@ -15,6 +15,8 @@ Necessário clonar o repositório:
   git clone https://github.com/FelippeAlves/Lab_Eng_Soft.git
   
   git checkout segunda-entrega
+  
+  cd Lab_Eng_Soft
 
   git pull
 ```
